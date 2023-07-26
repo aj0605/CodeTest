@@ -1,0 +1,28 @@
+<template>
+    <template if:true={isLoading}>
+    <lightning-spinner alternative-text="Loading" size="xx-small"></lightning-spinner>
+</template>
+<template if:false ={isLoading}>
+    <lightning-card title="Activate Account">
+        <div class="slds-p-around_medium">
+            <lightning-textarea
+                data-id="activationSummary" 
+                value={activationSummary}
+                name="activationSummary"
+                label="Account Activation Summary"
+                required
+            ></lightning-textarea>
+
+            <div class="slds-m-top_medium">
+                <lightning-button
+                    variant="brand"
+                    label="Activate Account"
+                    title="Activate Account"
+                    onclick={handleClick}
+                ></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
+</template>
+
